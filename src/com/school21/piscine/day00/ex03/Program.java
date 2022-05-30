@@ -1,5 +1,6 @@
 package com.school21.piscine.day00.ex03;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Program {
@@ -79,7 +80,9 @@ public class Program {
         long progress;
         while (result > 0) {
             progress = result % 10;
-            System.out.print("Week " + weekNum + " ");
+            System.out.print("Week ");
+            System.out.print(weekNum);
+            System.out.print(" ");
             while (progress > 0) {
                 System.out.print("=");
                 progress -= 1;

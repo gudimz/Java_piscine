@@ -4,13 +4,10 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
-        int inputNum = 0;
         Scanner in = new Scanner(System.in);
-        if (in.hasNextInt()) {
-            inputNum = in.nextInt();
-        }
-
         int countRequest = 0;
+        int inputNum = in.nextInt();
+
         while (inputNum != 42) {
             if (isPrime(sum(inputNum))) {
                 countRequest += 1;

@@ -1,6 +1,5 @@
 package com.school21.piscine.day00.ex03;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Program {
@@ -18,7 +17,7 @@ public class Program {
             if (firstWord.equals(("42")))
                 break;
 
-            numWeek = getNumWeek(scan);
+            numWeek = scan.nextInt();
             if (numWeek != count) {
                 scan.close();
                 exitError();
@@ -37,40 +36,25 @@ public class Program {
     }
 
     public static String getFirstWord(Scanner scan) {
-        String word = "";
-        if (scan.hasNext()) {
-            word = scan.next();
-            if (!word.equals("Week") && !word.equals("42")) {
-                scan.close();
-                exitError();
-            }
+        String word = scan.next();
+        if (!word.equals("Week") && !word.equals("42")) {
+            scan.close();
+            exitError();
         }
         return word;
     }
 
-    public static int getNumWeek(Scanner scan) {
-        int number = 0;
-        if (scan.hasNextInt()) {
-            number = scan.nextInt();
-        }
-        return number;
-    }
-
     public static int getMinGrade(Scanner scan) {
         int min = 9;
-        int current = 0;
+        int current;
 
         for (int i = 0; i < MAX_GRADES_COUNT; i++) {
-            if (scan.hasNextInt()) {
-                current = scan.nextInt();
-            }
+            current = scan.nextInt();
             if (current < 1 || current > 9) {
                 scan.close();
                 exitError();
             }
-            if (min > current) {
-                min = current;
-            }
+            min = (min > current) ? current : min;
         }
         return min;
     }

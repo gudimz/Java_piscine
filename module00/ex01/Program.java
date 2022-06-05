@@ -1,4 +1,4 @@
-package com.school21.piscine.day00.ex01;
+package ex01;
 
 import java.util.Scanner;
 

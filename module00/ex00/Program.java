@@ -1,4 +1,4 @@
-package com.school21.piscine.day00.ex00;
+package ex00;
 
 public class Program {
     public static void main(String[] args) {

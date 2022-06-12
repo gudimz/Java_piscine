@@ -1,4 +1,4 @@
-package ex03;
+package module00.ex03;
 
 import java.util.Scanner;
 

@@ -10,6 +10,8 @@
       <sourceFolder url="file://$MODULE_DIR$/module00/ex03d" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/module00/ex04d" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/module01" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

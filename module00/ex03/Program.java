@@ -54,7 +54,9 @@ public class Program {
                 scan.close();
                 exitError();
             }
-            min = (min > current) ? current : min;
+            if (min > current) {
+                min = current;
+            }
         }
         return min;
     }

@@ -1,15 +1,12 @@
-package module01.ex00;
+package module01.ex01;
 
 public class User {
-    private static Integer usersCounter = 0;
-
     private final Integer id;
     private String name;
     private Integer balance;
 
     public User(String name, Integer balance) {
-        this.id = usersCounter + 1;
-        usersCounter++;
+        this.id = UserIdsGenerator.getInstance().generateId();
         this.name = name;
         this.balance = (balance > 0) ? balance : 0;
     }

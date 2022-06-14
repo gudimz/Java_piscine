@@ -77,7 +77,7 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "UUID: " + id + ", Recipient: " + recipient.getName() + ", Category: " + category + ", Sender: "
-                + sender.getName() + ", Amount " + amount;
+        return "UUID: " + getId() + ", Recipient: " + getRecipient().getName() + ", Category: " + getCategory()
+                + ", Sender: " + getSender().getName() + ", Amount " + getAmount();
     }
 }

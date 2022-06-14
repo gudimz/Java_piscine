@@ -3,7 +3,7 @@ package module01.ex01;
 public class UserIdsGenerator {
     private static Integer id;
 
-    UserIdsGenerator() {
+    private UserIdsGenerator() {
         id = 0;
     }
 

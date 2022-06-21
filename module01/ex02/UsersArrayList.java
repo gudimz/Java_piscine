@@ -2,8 +2,8 @@ package module01.ex02;
 
 public class UsersArrayList implements UsersList {
     private User[] users;
-    private Integer capacity;
-    private Integer size;
+    private int capacity;
+    private int size;
 
     UsersArrayList() {
         this.capacity = 10;
@@ -13,7 +13,7 @@ public class UsersArrayList implements UsersList {
 
     @Override
     public void addUser(User user) {
-        if (size.equals(capacity - 1)) {
+        if (size == capacity - 1) {
             capacity += capacity / 2;
             User[] tmp = new User[capacity];
             for (int i = 0; i < size; i++) {
@@ -36,8 +36,8 @@ public class UsersArrayList implements UsersList {
     }
 
     @Override
-    public User getUserByIndex(Integer index) throws UserNotFoundException, ArrayIndexOutOfBoundsException {
-        if (index < 0 || index.compareTo(capacity) > 0) {
+    public User getUserByIndex(int index) throws UserNotFoundException, ArrayIndexOutOfBoundsException {
+        if (index < 0 || index >= capacity) {
             throw new ArrayIndexOutOfBoundsException();
         } else if (users[index] == null) {
             throw new UserNotFoundException("User with index: " + index + " in array was not found!");

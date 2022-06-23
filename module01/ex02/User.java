@@ -1,17 +1,17 @@
 package module01.ex02;
 
 public class User {
-    private final Integer id;
+    private final int id;
     private String name;
-    private Integer balance;
+    private int balance;
 
-    public User(String name, Integer balance) {
+    public User(String name, int balance) {
         this.id = UserIdsGenerator.getInstance().generateId();
         this.name = name;
         this.balance = (balance > 0) ? balance : 0;
     }
 
-    public Integer getId() {
+    public int getId() {
         return this.id;
     }
 
@@ -19,7 +19,7 @@ public class User {
         return this.name;
     }
 
-    public Integer getBalance() {
+    public int getBalance() {
         return this.balance;
     }
 
@@ -27,7 +27,7 @@ public class User {
         this.name = name;
     }
 
-    public void setBalance(Integer balance) {
+    public void setBalance(int balance) {
         if (balance >= 0) {
             this.balance += balance;
         } else {

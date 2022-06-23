@@ -1,7 +1,7 @@
 package module01.ex03;
 
 public class UserIdsGenerator {
-    private static Integer id;
+    private static int id;
 
     private UserIdsGenerator() {
         id = 0;
@@ -15,7 +15,7 @@ public class UserIdsGenerator {
         return SingletonHolder.INSTANCE;
     }
 
-    public Integer generateId() {
+    public int generateId() {
         return id += 1;
     }
 }

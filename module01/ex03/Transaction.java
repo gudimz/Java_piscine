@@ -11,9 +11,9 @@ public class Transaction {
         CREDIT
     }
     private TransferCategory category;
-    private Integer amount;
+    private int amount;
 
-    public Transaction(User recipient, User sender, Integer amount) {
+    public Transaction(User recipient, User sender, int amount) {
         this.id = UUID.randomUUID();
         this.recipient = recipient;
         this.sender = sender;
@@ -66,11 +66,11 @@ public class Transaction {
         return category;
     }
 
-    public Integer getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(Integer amount) {
+    public void setAmount(int amount) {
         this.amount = (amount > 0) ? amount : amount * -1;
         this.category = (amount > 0) ? TransferCategory.CREDIT : TransferCategory.DEBIT;
     }

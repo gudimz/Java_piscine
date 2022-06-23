@@ -26,9 +26,9 @@ public class UsersArrayList implements UsersList {
     }
 
     @Override
-    public User getUserById(Integer id) throws UserNotFoundException {
+    public User getUserById(int id) throws UserNotFoundException {
         for (int i = 0; i < size; i++) {
-            if (id.equals(users[i].getId())) {
+            if (users[i].getId() == id) {
                 return users[i];
             }
         }
@@ -46,7 +46,7 @@ public class UsersArrayList implements UsersList {
     }
 
     @Override
-    public Integer getNumberOfUsers() {
+    public int getNumberOfUsers() {
         return size;
     }
 }

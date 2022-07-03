@@ -18,7 +18,7 @@ public class Program {
         }
 
         try {
-            printThreads(count);
+            runPrinter(count);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -28,9 +28,9 @@ public class Program {
         }
     }
 
-    public static void printThreads(int count) throws InterruptedException {
-        Thread egg = new Thread(new MyThread("Egg", count));
-        Thread hen = new Thread(new MyThread("Hen", count));
+    public static void runPrinter(int count) throws InterruptedException {
+        Thread egg = new Thread(new Printer("Egg", count));
+        Thread hen = new Thread(new Printer("Hen", count));
 
         egg.start();
         hen.start();

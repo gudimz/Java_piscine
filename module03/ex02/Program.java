@@ -26,34 +26,37 @@ public class Program {
             System.err.println("Error: incorrect argument");
         }
 
-        int[] arrayNumbers = new int[arraySize];
-        for (int i = 0; i < arrayNumbers.length; i++) {
+        int[] Numbers = new int[arraySize];
+        for (int i = 0; i < Numbers.length; i++) {
             int number = (int)(Math.random() * 1000);
             sumFromArray += number;
-            arrayNumbers[i] = number;
+            Numbers[i] = number;
         }
         System.out.println("Sum: " + sumFromArray);
 
-        int offset = arraySize / threadsCount;
         int remainder = arraySize % threadsCount;
-        ArrayList<Thread> listThreads = new ArrayList<>(threadsCount);
-        int start = 0;
-        int end = 0;
+        int offset;
+        if (remainder != 0) {
+            offset = arraySize / threadsCount + 1;
+        } else {
+            offset = arraySize / threadsCount;
+        }
+        ArrayList<Thread> Threads = new ArrayList<>(threadsCount);
         int num = 1;
 
-        while (end < arraySize - offset - remainder) {
-            end = start + offset;
-            listThreads.add(new Thread(new Calculator(num, Arrays.copyOfRange(arrayNumbers, start, end), start, end)));
-            start = end;
+        for (int i = 0; i < threadsCount - 1; i++) {
+            int start = i * offset;
+            int end = (i + 1) * offset;
+            Threads.add(new Thread(new Calculator(num, Arrays.copyOfRange(Numbers, start, end), start, end - 1)));
             num++;
         }
-        end = start + offset + remainder;
-        listThreads.add(new Thread(new Calculator(num, Arrays.copyOfRange(arrayNumbers, start, end), start, end)));
-        for (Thread thread : listThreads) {
+        int start = (threadsCount - 1) * offset;
+        Threads.add(new Thread(new Calculator(num, Arrays.copyOfRange(Numbers, start, Numbers.length), start, Numbers.length)));
+        for (Thread thread : Threads) {
             thread.start();
         }
 
-        for (Thread thread : listThreads) {
+        for (Thread thread : Threads) {
             try {
                 thread.join();
             } catch (InterruptedException e) {

@@ -1,8 +1,6 @@
 package module03.ex02;
 
-import java.util.Arrays;
-
-public class Calculator extends Thread {
+public class Calculator implements Runnable {
     private int num;
     private int sum;
     private final int start;

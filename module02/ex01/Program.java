@@ -8,7 +8,7 @@ import java.util.*;
 public class Program {
     public static ArrayList<String> inputA = new ArrayList<>();
     public static ArrayList<String> inputB = new ArrayList<>();
-    public static TreeSet<String > dictionary = new TreeSet<>();
+    public static TreeSet<String> dictionary = new TreeSet<>();
     private static final String  DICTIONARY_FILE = "dictionary.txt";
 
     public static void main(String[] args) {

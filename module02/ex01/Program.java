@@ -1,4 +1,3 @@
-package module02.ex01;
 
 import java.io.*;
 import java.math.BigDecimal;

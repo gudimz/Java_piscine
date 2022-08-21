@@ -1,4 +1,3 @@
-package module03.ex01;
 
 public class Printer implements Runnable {
     private final String name;

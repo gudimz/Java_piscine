@@ -1,4 +1,3 @@
-package module02.ex02;
 
 import java.io.*;
 import java.nio.file.*;

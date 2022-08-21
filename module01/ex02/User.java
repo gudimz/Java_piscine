@@ -1,4 +1,3 @@
-package module01.ex02;
 
 public class User {
     private final int id;

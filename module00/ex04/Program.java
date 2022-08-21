@@ -1,4 +1,3 @@
-package module00.ex04;
 
 import java.util.Scanner;
 

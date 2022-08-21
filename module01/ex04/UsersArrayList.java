@@ -1,4 +1,3 @@
-package module01.ex04;
 
 public class UsersArrayList implements UsersList {
     private User[] users;

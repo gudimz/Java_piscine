@@ -1,4 +1,3 @@
-package module01.ex00;
 
 public class User {
     private static Integer usersCounter = 0;

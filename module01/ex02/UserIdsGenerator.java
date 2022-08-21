@@ -1,4 +1,3 @@
-package module01.ex02;
 
 public class UserIdsGenerator {
     private static int id;

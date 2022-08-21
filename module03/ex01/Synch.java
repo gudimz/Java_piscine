@@ -1,4 +1,3 @@
-package module03.ex01;
 
 public class Synch {
     private static boolean flag = false;

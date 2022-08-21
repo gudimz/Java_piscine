@@ -1,4 +1,3 @@
-package module01.ex02;
 
 public class Program {
     public static void main(String[] args) throws UserNotFoundException {

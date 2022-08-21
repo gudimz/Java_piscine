@@ -1,4 +1,3 @@
-package module02.ex00;
 
 import java.io.*;
 import java.util.*;

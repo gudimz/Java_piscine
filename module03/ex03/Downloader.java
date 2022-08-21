@@ -1,4 +1,3 @@
-package module03.ex03;
 
 import java.io.*;
 import java.net.URL;

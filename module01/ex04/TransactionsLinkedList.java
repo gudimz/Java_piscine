@@ -1,4 +1,3 @@
-package module01.ex04;
 
 import java.util.UUID;
 

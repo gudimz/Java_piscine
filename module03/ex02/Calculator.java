@@ -1,4 +1,3 @@
-package module03.ex02;
 
 public class Calculator implements Runnable {
     private int num;
